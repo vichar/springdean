@@ -15,8 +15,8 @@ public class OrderService {
 	
 	public void save(OrderProduct orderProduct,ResponesBean result) {
 		try {
-			customerRespoitory.save(new Customer());
-			orderRepository.save(new Order());
+			customerRespoitory.save(new Customer((orderProduct.getFristName()+orderProduct.getLastName()),orderProduct.getAddress()));
+			orderRepository.save(new Order(orderProduct.getName(), orderProduct.getPrice(), orderProduct.getDesc()));
 			result.setCode("000");
 			result.setDesc("save success");
 		}catch (Exception e) {

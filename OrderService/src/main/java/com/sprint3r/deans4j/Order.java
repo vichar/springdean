@@ -8,6 +8,17 @@ import javax.persistence.Id;
 @Entity
 public class Order {
 	
+	public Order(){
+		
+	}
+	
+	public Order(String name, Float price, String desc) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.desc = desc;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
