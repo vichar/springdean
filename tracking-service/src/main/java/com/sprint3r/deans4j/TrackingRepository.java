@@ -8,6 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface TrackingRepository extends CrudRepository<Tracking, Long> {
 
 	Optional<Tracking> findByOrderId(Long orderId);
-	List<Tracking> findAllOrderId(Long orderId);
+	List<Tracking> findAllByOrderId(Long orderId);
 	
 }
