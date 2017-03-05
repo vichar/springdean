@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 jar {
-	baseName = 'springboot-data-jpa'
+	baseName = 'springboot-config-server'
 	version = '0.0.1-SNAPSHOT'
 }
 
@@ -27,15 +27,7 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.cloud:spring-cloud-starter-config')
-	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-	compile('org.springframework.boot:spring-boot-starter-data-rest')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	compile('org.springframework.cloud:spring-cloud-starter-eureka')
-	compile('org.springframework.boot:spring-boot-starter-actuator')
-	runtime('org.springframework.boot:spring-boot-devtools')
-	compileOnly('org.projectlombok:lombok')
-	compile('com.h2database:h2')
+	compile('org.springframework.cloud:spring-cloud-config-server')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
