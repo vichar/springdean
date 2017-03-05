@@ -10,6 +10,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +29,12 @@ public class SpringbootEurekaClientApplication {
 	String updateTrackingNumber(Long orderId, String tackingNumber) {
 		
 		Optional<Tracking> t = repo.findByOrderId(orderId);
-		Tracking tracking = t.get();
+		Tracking tracking;
+		if (t.empty() != null) {
+			tracking = new Tracking(tackingNumber, "Packing", orderId);
+		} else {
+			tracking = t.get();
+		}
 		tracking.setTackingNumber(tackingNumber);
 		repo.save(tracking);
 		return "success";
@@ -44,12 +50,9 @@ public class SpringbootEurekaClientApplication {
 		return "success";
 	}
 	
-	//UpdateTrackingNumber
-	
-	
-	@GetMapping("/getTrackingStatusByOrderId")
-	Iterable<Tracking> genTrackingNoByOrderId(Long orderId) {
-		return repo.findAllOrderId(orderId);
+	@GetMapping("/getTrackingStatusByOrderId/{orderId}")
+	Iterable<Tracking> genTrackingNoByOrderId(@PathVariable("orderId") Long orderId) {
+		return repo.findAllByOrderId(orderId);
 	}
 
 	@Bean
