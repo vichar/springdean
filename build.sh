@@ -1,5 +1,4 @@
 #bin/bash
-echo "springboot-data-jpa"
 ls -la
 echo "OrderService"
 cd ./OrderService
@@ -9,4 +8,6 @@ cd ../ProductService
 ./gradlew build
 echo "tracking-service"
 cd ../tracking-service
+./gradlew build
+cd ../edge
 ./gradlew build
