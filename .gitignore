@@ -18,3 +18,5 @@ OrderService/build
 gradle-wrapper.properties
 springboot-data-jpa/.gradle
 springboot-data-jpa/build
+edge/.gradle
+edge/build
