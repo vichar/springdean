@@ -12,7 +12,7 @@ public class OrderController {
 	@Resource
 	OrderService orderService;
 	
-	@PostMapping("/")
+	@PostMapping("/orderProduct")
 	public ResponesBean save(@RequestBody OrderProduct orderProduct) {
 		
 		ResponesBean resutl = new ResponesBean();
