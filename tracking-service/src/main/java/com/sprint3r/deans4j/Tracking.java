@@ -16,21 +16,23 @@ public class Tracking {
 	
 	private String tackingNumber;
 	
-	private Date sentDate;
+	private String status;
+	
+	//private Date sentDate;
 	
 	private Long orderId;
 	
     protected Tracking() {
     }
 
-    public Tracking(String tackingNumber, Date sentDate, Long orderId) {
-        this(null, tackingNumber, sentDate, orderId);
+    public Tracking(String tackingNumber, String status, Long orderId) {
+        this(null, tackingNumber, status, orderId);
     }
 
-    Tracking(Long id, String tackingNumber, Date sentDate, Long orderId) {
+    Tracking(Long id, String tackingNumber, String status, Long orderId) {
         this.id = id;
         this.tackingNumber = tackingNumber;
-        this.sentDate = sentDate;
+        this.status = status;
         this.orderId = orderId;
     }
 
@@ -50,12 +52,14 @@ public class Tracking {
 		this.tackingNumber = tackingNumber;
 	}
 
-	public Date getSentDate() {
-		return sentDate;
+	
+
+	public String getStatus() {
+		return status;
 	}
 
-	public void setSentDate(Date sentDate) {
-		this.sentDate = sentDate;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public Long getOrderId() {

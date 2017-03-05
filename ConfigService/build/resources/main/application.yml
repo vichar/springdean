@@ -6,9 +6,4 @@ spring:
     config:
       server:
         git :
-          uri: https://github.com/vichar/springdeanconflict.git
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://10.0.1.3:8761/eureka/
+          uri: https://github.com/schalermthai/springboot-course-config-production.git

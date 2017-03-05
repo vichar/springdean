@@ -8,18 +8,6 @@ import javax.persistence.Id;
 @Entity
 public class Customer {
 	
-	public Customer() {
-		
-	}
-	
-	public Customer(String name, String address) {
-		super();
-		this.name = name;
-		this.address = address;
-	}
-
-
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
