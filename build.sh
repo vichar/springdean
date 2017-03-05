@@ -1,3 +1,5 @@
 #bin/bash
-cd ./OrderService
+cd ./springboot-data-jpa
+./gradlew build
+cd ../OrderService
 ./gradlew build
