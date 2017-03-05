@@ -1,5 +1,6 @@
 #bin/bash
 echo "springboot-data-jpa"
+ls -la
 cd ./springboot-data-jpa
 ./gradlew build
 echo "OrderService"
