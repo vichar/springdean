@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 jar {
-	baseName = 'springboot-eureka-client'
+	baseName = 'OrderService'
 	version = '0.0.1-SNAPSHOT'
 }
 
