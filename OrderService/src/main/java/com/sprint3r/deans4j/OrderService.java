@@ -16,7 +16,7 @@ public class OrderService {
 	public void save(OrderProduct orderProduct,ResponesBean result) {
 		try {
 			customerRespoitory.save(new Customer());
-			orderRepository.save(new Order());
+			orderRepository.save(new Orders());
 			result.setCode("000");
 			result.setDesc("save success");
 		}catch (Exception e) {
