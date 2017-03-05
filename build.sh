@@ -10,3 +10,5 @@ cd ../ProductService
 echo "tracking-service"
 cd ../tracking-service
 ./gradlew build
+cd ../edge
+./gradlew build
