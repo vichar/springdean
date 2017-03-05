@@ -6,13 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Order {
+public class Orders {
 	
-	public Order(){
+	public Orders(){
 		
 	}
 	
-	public Order(String name, Float price, String desc) {
+	public Orders(String name, Float price, String desc) {
 		super();
 		this.name = name;
 		this.price = price;

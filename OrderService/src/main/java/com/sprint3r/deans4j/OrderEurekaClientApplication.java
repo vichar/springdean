@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @EnableEurekaClient
 @SpringBootApplication
-@EntityScan
-@EnableJpaRepositories
+@EntityScan(basePackages="com.sprint3r.deans4j")
+@EnableJpaRepositories(basePackages="com.sprint3r.deans4j")
 public class OrderEurekaClientApplication {
 
 	public static void main(String[] args) {
