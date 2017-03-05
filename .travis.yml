@@ -2,4 +2,4 @@ sudo: required
 language: java
 jdk:
    - oraclejdk8
-script: ./build2.sh
+script: ./build.sh
